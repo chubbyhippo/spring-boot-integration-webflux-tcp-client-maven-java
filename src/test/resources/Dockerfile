@@ -1,7 +1,6 @@
 FROM bellsoft/liberica-openjdk-alpine:17 AS builder
 WORKDIR application
 COPY mock-echo-tcp-server/gradle gradle
-COPY mock-echo-tcp-server/.gradle .gradle
 COPY mock-echo-tcp-server/gradlew gradlew
 COPY mock-echo-tcp-server/build.gradle.kts build.gradle.kts
 RUN sed -i 's/\r$//' gradlew # For windows os
