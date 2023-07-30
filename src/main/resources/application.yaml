@@ -1,0 +1,8 @@
+tcp:
+  client:
+    so-timeout: 200
+    connection:
+      pool-size: 1
+  server:
+    host: 127.0.0.1
+    port: 9876
