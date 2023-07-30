@@ -23,13 +23,15 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-integration")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.integration:spring-integration-http")
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springframework.integration:spring-integration-webflux")
+	implementation("org.springframework.integration:spring-integration-ip")
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-testcontainers")
+	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("org.springframework.integration:spring-integration-test")
 	testImplementation("org.testcontainers:junit-jupiter")
 }
