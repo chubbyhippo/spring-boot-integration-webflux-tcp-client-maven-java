@@ -17,7 +17,7 @@ public abstract class AbstractTestContainersSetup {
     @SuppressWarnings("rawtypes")
     public static DockerComposeContainer environment =
             new DockerComposeContainer(new File("src/test/resources/compose.yaml"))
-                    .withExposedService("mock-tcp-server",
+                    .withExposedService("app",
                             9876,
                             Wait.forListeningPort()
                                     .withStartupTimeout(Duration.ofMinutes(10)));
