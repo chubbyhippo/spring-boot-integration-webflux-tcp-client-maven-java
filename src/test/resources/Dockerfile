@@ -4,7 +4,6 @@ COPY mock-echo-tcp-server/gradle gradle
 COPY mock-echo-tcp-server/gradlew gradlew
 COPY mock-echo-tcp-server/build.gradle.kts build.gradle.kts
 RUN sed -i 's/\r$//' gradlew # For windows os
-RUN ./gradlew dependencies
 COPY mock-echo-tcp-server/src src
 RUN ./gradlew bootJar
 RUN java -Djarmode=layertools -jar build/libs/*.jar extract
