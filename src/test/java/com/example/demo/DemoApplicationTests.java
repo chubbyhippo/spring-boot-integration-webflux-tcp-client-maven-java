@@ -1,10 +1,11 @@
 package com.example.demo;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.reactive.server.WebTestClient;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class DemoApplicationTests extends AbstractTestContainersSetup {
@@ -22,8 +23,7 @@ class DemoApplicationTests extends AbstractTestContainersSetup {
                         .build())
                 .exchange()
                 .expectBody(String.class)
-                .value(s -> Assertions.assertThat(s)
-                        .isEqualTo(input));
+                .value(s -> assertThat(s).isEqualTo(input));
 
     }
 
