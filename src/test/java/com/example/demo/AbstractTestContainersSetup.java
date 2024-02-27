@@ -3,7 +3,7 @@ package com.example.demo;
 import org.junit.ClassRule;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.testcontainers.containers.DockerComposeContainer;
+import org.testcontainers.containers.ComposeContainer;
 import org.testcontainers.containers.wait.strategy.Wait;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
@@ -14,13 +14,12 @@ import java.time.Duration;
 public abstract class AbstractTestContainersSetup {
 
     @ClassRule
-    @SuppressWarnings("rawtypes")
-    public static DockerComposeContainer environment =
-            new DockerComposeContainer(new File("src/test/resources/compose.yaml"))
+    public static ComposeContainer environment =
+            new ComposeContainer(new File("src/test/resources/compose.yaml"))
                     .withExposedService("app",
                             9876,
                             Wait.forListeningPort()
-                                    .withStartupTimeout(Duration.ofMinutes(10)));
+                                    .withStartupTimeout(Duration.ofMinutes(5)));
 
     @BeforeAll
     static void setUp() {
