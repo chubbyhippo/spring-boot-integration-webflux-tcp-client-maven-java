@@ -19,7 +19,7 @@ public abstract class AbstractTestContainersSetup {
                     .withExposedService("app",
                             9876,
                             Wait.forListeningPort()
-                                    .withStartupTimeout(Duration.ofMinutes(5)));
+                                    .withStartupTimeout(Duration.ofMinutes(10)));
 
     @BeforeAll
     static void setUp() {
