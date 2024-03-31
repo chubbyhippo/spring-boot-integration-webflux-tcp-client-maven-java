@@ -1,4 +1,4 @@
-package org.github.chubbyhippo.demo;
+package org.github.chubbyhippo.tcpclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

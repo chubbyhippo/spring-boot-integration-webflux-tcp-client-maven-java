@@ -1,6 +1,6 @@
-package org.github.chubbyhippo.demo.application.service;
+package org.github.chubbyhippo.tcpclient.service;
 
-import org.github.chubbyhippo.demo.inflastructure.service.TcpClientService;
+import org.github.chubbyhippo.tcpclient.inflastructure.service.TcpClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

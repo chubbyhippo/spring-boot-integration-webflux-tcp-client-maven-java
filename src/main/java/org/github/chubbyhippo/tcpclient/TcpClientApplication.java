@@ -1,4 +1,4 @@
-package org.github.chubbyhippo.demo;
+package org.github.chubbyhippo.tcpclient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
