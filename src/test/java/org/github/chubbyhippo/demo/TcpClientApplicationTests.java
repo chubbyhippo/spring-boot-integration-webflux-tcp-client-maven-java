@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(ContainersConfig.class)
-class DemoApplicationTests {
+class TcpClientApplicationTests {
 
     @Autowired
     private WebTestClient client;
