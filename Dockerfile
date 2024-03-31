@@ -1,4 +1,4 @@
-FROM alpine/git as code
+FROM alpine/git AS code
 WORKDIR /application
 RUN git clone https://github.com/chubbyhippo/spring-boot-reactor-tcp-echo-server-gradle-java.git mock-echo-tcp-server
 
