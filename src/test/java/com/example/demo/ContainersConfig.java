@@ -15,7 +15,7 @@ public class ContainersConfig {
     @Bean
     ComposeContainer composeContainer(DynamicPropertyRegistry registry) {
 
-        var compose = new ComposeContainer(new File("src/test/resources/compose.yaml"))
+        var compose = new ComposeContainer(new File("compose.yaml"))
                 .withExposedService("app",
                         9876,
                         Wait.forListeningPort()
