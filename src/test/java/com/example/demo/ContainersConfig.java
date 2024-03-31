@@ -16,14 +16,14 @@ public class ContainersConfig {
     ComposeContainer composeContainer(DynamicPropertyRegistry registry) {
 
         var compose = new ComposeContainer(new File("compose.yaml"))
-                .withExposedService("app",
+                .withExposedService("mock-tcpserver",
                         9876,
                         Wait.forListeningPort()
                                 .withStartupTimeout(Duration.ofMinutes(10)))
                 .withLocalCompose(true);
 
-        registry.add("tcp.server.host", () -> compose.getServiceHost("app", 9876));
-        registry.add("tcp.server.port", () -> compose.getServicePort("app", 9876));
+        registry.add("tcp.server.host", () -> compose.getServiceHost("mock-tcpserver", 9876));
+        registry.add("tcp.server.port", () -> compose.getServicePort("mock-tcpserver", 9876));
 
         return compose;
     }
