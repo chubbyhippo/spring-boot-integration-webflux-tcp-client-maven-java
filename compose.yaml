@@ -1,5 +1,5 @@
 services:
-  app:
+  mock-tcpserver:
     build:
       context: ./
       dockerfile: Dockerfile
