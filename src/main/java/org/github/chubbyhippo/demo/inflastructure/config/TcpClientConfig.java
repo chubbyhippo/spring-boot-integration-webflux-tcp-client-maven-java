@@ -1,4 +1,4 @@
-package com.example.demo.inflastructure.config;
+package org.github.chubbyhippo.demo.inflastructure.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
