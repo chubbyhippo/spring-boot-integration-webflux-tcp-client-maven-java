@@ -1,6 +1,6 @@
-package org.github.chubbyhippo.tcpclient.rest;
+package io.github.chubbyhippo.tcpclient.rest;
 
-import org.github.chubbyhippo.tcpclient.service.MessageService;
+import io.github.chubbyhippo.tcpclient.service.MessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;

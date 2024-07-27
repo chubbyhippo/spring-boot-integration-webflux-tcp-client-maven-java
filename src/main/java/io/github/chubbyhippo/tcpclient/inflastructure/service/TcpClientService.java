@@ -1,4 +1,4 @@
-package org.github.chubbyhippo.tcpclient.inflastructure.service;
+package io.github.chubbyhippo.tcpclient.inflastructure.service;
 
 import org.springframework.integration.annotation.MessagingGateway;
 import org.springframework.stereotype.Service;
