@@ -1,10 +1,10 @@
 plugins {
 	java
-	id("org.springframework.boot") version "3.2.4"
-	id("io.spring.dependency-management") version "1.1.4"
+	id("org.springframework.boot") version "3.3.2"
+	id("io.spring.dependency-management") version "1.1.6"
 }
 
-group = "org.github.chubbyhippo"
+group = "io.github.chubbyhippo"
 version = "0.0.1-SNAPSHOT"
 
 java {
